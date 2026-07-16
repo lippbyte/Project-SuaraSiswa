@@ -23,7 +23,7 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 function App() {
   const [allData, setAllData] = useState([]);
   const [showLogin, setShowLogin] = useState(false);
-  const [overflow, setOverflow] = useState('hidden');
+  const [overflow, setOverflow] = useState('visible');
   const [page, setPage] = useState('mading');
   const [cardData, setCardData] = useState(null);
   const [user, setUser] = useState(() => {
@@ -148,6 +148,8 @@ function App() {
 
   const setPageFunc = (value) => {
     setPage(value);
+    // Immediately reset overflow when navigating away from mading
+    if (value !== 'mading') setOverflow('visible');
   };
 
   const pageMapping = {

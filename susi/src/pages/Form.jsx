@@ -141,7 +141,7 @@ export default function Form({ setPageFunc, user, setShowLogin }) {
 
     if (!user) {
         return (
-            <div className="page-container pl-4 pr-4 pb-4 pt-20 md:pt-24 lg:pl-12 lg:pr-12 lg:pt-26 flex flex-col justify-center items-center bg-light text-dark gap-4 min-h-[60vh]">
+            <div className="page-container pl-4 pr-4 pb-4 pt-20 md:pt-24 lg:pl-12 lg:pr-12 lg:pt-26 flex flex-col justify-center items-center bg-light text-dark gap-4 min-h-svh">
                 <div className="p-6 bg-neutral-50 border border-accent-100 rounded-lg shadow-md flex flex-col items-center text-center max-w-md gap-3">
                     <h2 className="text-xl font-bold text-[#5C7A6B]">Buku Tamu Diperlukan</h2>
                     <p className="text-sm text-dark-100">Anda harus mengisi Buku Tamu atau masuk terlebih dahulu sebelum dapat membuat unggahan baru.</p>
@@ -157,7 +157,7 @@ export default function Form({ setPageFunc, user, setShowLogin }) {
     }
 
     return (
-        <div className="page-container pl-4 pr-4 pb-4 pt-20 md:pt-24 lg:pl-12 lg:pr-12 lg:pt-26 text-[10px] md:text-sm bg-light">
+        <div className="page-container pl-4 pr-4 pb-4 pt-20 md:pt-24 lg:pl-12 lg:pr-12 lg:pt-26 text-[10px] md:text-sm bg-light min-h-svh overflow-y-auto">
             <div className="flex flex-col gap-2 pb-4">
                 <h1 className="text-2xl lg:text-4xl font-bold">Form Unggahan</h1>
                 <p className="pb-2">Buat unggahan anda di sini</p>
