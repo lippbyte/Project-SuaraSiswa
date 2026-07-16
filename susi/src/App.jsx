@@ -181,7 +181,10 @@ function App() {
   }, [page]);
 
   return (
-    <div style={{ overflow: overflow }} className="w-full h-svh bg-light">
+    <div
+      style={{ overflow: overflow }}
+      className={`w-full bg-light ${page === 'mading' ? 'h-svh' : 'min-h-svh'}`}
+    >
       <Navbar showLogin={showLogin} setShowLogin={setShowLogin} setPageFunc={setPageFunc} page={page} user={user} setUser={setUser} />
       {pageMapping[page]}
       {/* <Form /> */}
