@@ -165,7 +165,8 @@ function App() {
 
   useGSAP(() => {
     const madingContainer = document.querySelector('#mading-container');
-    gsap.from('.page-container', { opacity: 0 });
+    // Use fromTo with clearProps to guarantee page is always visible after animation
+    gsap.fromTo('.page-container', { opacity: 0 }, { opacity: 1, duration: 0.4, clearProps: 'opacity,filter' });
     if (madingContainer) {
       setOverflow('hidden');
       gsap.set('#mading-container', { x: -(madingContainer.offsetWidth / 2 - window.innerWidth / 2), y: -(madingContainer.offsetHeight / 2 - window.innerHeight / 2) });

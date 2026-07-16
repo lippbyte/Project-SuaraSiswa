@@ -15,6 +15,15 @@ export default function Login({ setUser, setShowLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    // Helper: restore page visibility (remove blur + re-enable pointer events)
+    const clearPageBlur = () => {
+        const page = document.querySelector('.page-container');
+        if (page) {
+            page.style.pointerEvents = 'auto';
+            gsap.to('.page-container', { filter: 'blur(0px)' });
+        }
+    };
+
     useGSAP(() => {
         gsap.to('.page-container', { filter: 'blur(10px)' })
         gsap.from('.login-container', { yPercent: -100, opacity: 0, duration: 0.4, ease: "back.out" })
@@ -53,7 +62,10 @@ export default function Login({ setUser, setShowLogin }) {
             }
         } catch (err) {
             console.error(err);
-            alert('Gagal menghubungi backend server.');
+            // Restore page visibility so user can still interact
+            clearPageBlur();
+            setShowLogin(false);
+            alert('Gagal menghubungi backend server. Pastikan koneksi internet Anda stabil.');
         }
     };
 
@@ -85,7 +97,10 @@ export default function Login({ setUser, setShowLogin }) {
             }
         } catch (err) {
             console.error(err);
-            alert('Gagal menghubungi backend server.');
+            // Restore page visibility so user can still interact
+            clearPageBlur();
+            setShowLogin(false);
+            alert('Gagal menghubungi backend server. Pastikan koneksi internet Anda stabil.');
         }
     };
 
