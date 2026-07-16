@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "type": "diskusi",
+        "category": "lingkungan",
+        "title": "Kebersihan Lingkungan Sekolah",
+        "text": "Bagaimana pendapat kalian mengenai jadwal piket baru yang akan diterapkan mulai minggu depan?",
+        "sender": "Andi Perkasa",
+        "class": "XII-IPA-1",
+        "vote": 150,
+        "time": "12:40",
+        "replies": [
+            {
+                "id": 101,
+                "sender": "Budi Utomo",
+                "class": "XII-IPS-2",
+                "text": "Saya setuju, asalkan pembagian waktunya adil untuk yang ekskul.",
+                "vote": 12
+            },
+            {
+                "id": 102,
+                "sender": "Siti Aminah",
+                "class": "XI-IPA-3",
+                "text": "Mungkin bisa ditambah poin untuk yang paling rajin?",
+                "vote": 45
+            },
+            {
+                "id": 103,
+                "sender": "Rakan Shaka",
+                "class": "XII-IPA-2",
+                "text": "Jadwal piket ini sangat fleksibel, aku harap dapat berjalan dengan baik.",
+                "vote": 20
+            },
+            {
+                "id": 104,
+                "sender": "Khaffa Daru Hastri",
+                "class": "XII-IPA-2",
+                "text": "Pembagian piket harus menyesuaikan dengan kegiatan masing-masing murid.",
+                "vote": 20
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "type": "musyawarah",
+        "category": "kegiatan",
+        "title": "Rapat Evaluasi Ekstrakurikuler",
+        "text": "Pembahasan mengenai efektivitas kegiatan setelah jam sekolah.",
+        "sender": "OSIS",
+        "vote": 100,
+        "time": "14:00",
+        "status": true,
+        "agenda": [
+            "Pembukaan oleh kepala sekolah.",
+            "Membahas kepentingan kegiatan ekstrakurikuler.",
+            "Sesi voting pendapat.",
+            "Pembulatan keputusan."
+        ],
+        "peserta": [
+            {
+                "name": "Andi",
+                "role": "Ketua",
+                "keterangan": true
+            },
+            {
+                "name": "Budi",
+                "role": "Sekretaris",
+                "keterangan": true
+            },
+            {
+                "name": "Siti",
+                "role": "Bendahara",
+                "keterangan": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "demos",
+        "category": "fasilitas",
+        "title": "Pilihan Menu Kantin Baru",
+        "text": "Pilih menu yang paling kalian inginkan untuk tersedia di kantin bulan depan.",
+        "sender": "Kantin Sehat",
+        "vote": 100,
+        "time": "09:00",
+        "options": [
+            {
+                "id": 1,
+                "label": "Nasi Bakar Ayam",
+                "currentVotes": 65
+            },
+            {
+                "id": 2,
+                "label": "Mie Aceh Spesial",
+                "currentVotes": 20
+            },
+            {
+                "id": 3,
+                "label": "Salad Buah Segar",
+                "currentVotes": 45
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "type": "laporan",
+        "category": "kegiatan",
+        "title": "Laporan Kegiatan Pramuka",
+        "text": "Pelaksanaan kemah Sabtu-Minggu berjalan lancar dengan partisipasi 90% anggota.",
+        "sender": "Pembina Pramuka",
+        "vote": 15,
+        "time": "08:00"
+    },
+    {
+        "id": 5,
+        "type": "diskusi",
+        "category": "akademik",
+        "title": "Penggunaan Gadget di Kelas",
+        "text": "Apakah penggunaan tablet lebih efektif dibandingkan buku cetak untuk materi biologi?",
+        "sender": "Rina Wijaya",
+        "class": "XI-IPA-2",
+        "vote": 88,
+        "time": "10:15",
+        "replies": [
+            {
+                "id": 103,
+                "sender": "Dedi K.",
+                "class": "XI-IPA-2",
+                "text": "Tablet lebih ringkas, tapi distrasinya banyak.",
+                "vote": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "type": "musyawarah",
+        "category": "kegiatan",
+        "title": "Penentuan Lokasi Study Tour",
+        "text": "Menentukan antara Yogyakarta atau Malang untuk akhir tahun ajaran.",
+        "sender": "Panitia Kelas",
+        "vote": 210,
+        "time": "15:30",
+        "status": false,
+        "agenda": [
+            "Presentasi biaya perjalanan.",
+            "Perbandingan objek wisata.",
+            "Voting suara terbanyak."
+        ],
+        "peserta": [
+            {
+                "name": "Hendra",
+                "role": "Koordinator",
+                "keterangan": true
+            },
+            {
+                "name": "Siska",
+                "role": "Admin",
+                "keterangan": true
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "type": "demos",
+        "category": "fasilitas",
+        "title": "Desain Kaos Olahraga Baru",
+        "text": "Vote desain yang paling keren untuk seragam olahraga tahun ini.",
+        "sender": "Kesiswaan",
+        "vote": 350,
+        "time": "11:00",
+        "options": [
+            {
+                "id": 1,
+                "label": "Neon Sporty",
+                "currentVotes": 120
+            },
+            {
+                "id": 2,
+                "label": "Classic Blue",
+                "currentVotes": 230
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "type": "laporan",
+        "category": "sosial",
+        "title": "Hasil Donasi Bencana Alam",
+        "text": "Total dana terkumpul Rp 5.000.000 dan telah disalurkan melalui Palang Merah.",
+        "sender": "PMR Sekolah",
+        "vote": 45,
+        "time": "16:45"
+    },
+    {
+        "id": 9,
+        "type": "diskusi",
+        "category": "akademik",
+        "title": "Persiapan Ujian Akhir",
+        "text": "Butuh rekomendasi platform belajar online yang gratis dan lengkap.",
+        "sender": "Fajar Shidiq",
+        "class": "XII-IPS-1",
+        "vote": 67,
+        "time": "19:20",
+        "replies": [
+            {
+                "id": 104,
+                "sender": "Lani",
+                "class": "XII-IPA-1",
+                "text": "Coba cek YouTube channel khusus edukasi, banyak yang bagus.",
+                "vote": 22
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "type": "musyawarah",
+        "category": "fasilitas",
+        "title": "Perbaikan Fasilitas Lab Komputer",
+        "text": "Membahas penggantian mouse dan keyboard yang sudah rusak.",
+        "sender": "Kepala Lab",
+        "vote": 30,
+        "time": "07:30",
+        "status": true,
+        "agenda": [
+            "Cek inventaris rusak.",
+            "Pengajuan anggaran ke sekolah.",
+            "Penjadwalan instalasi."
+        ],
+        "peserta": [
+            {
+                "name": "Pak Mulyadi",
+                "role": "Teknisi",
+                "keterangan": true
+            },
+            {
+                "name": "Bu Ratna",
+                "role": "Kepala Lab",
+                "keterangan": true
+            }
+        ]
+    }
+]

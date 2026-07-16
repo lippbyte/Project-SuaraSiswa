@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+
+# Environment variables (JANGAN di-commit!)
+.env
+
+# Runtime
+dist

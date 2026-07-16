@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer utilities {
+
+  /* Styling Scrollbar Minimalis */
+  .scrollbar-minimal {
+    scrollbar-width: thin;
+    /* Untuk Firefox */
+    scrollbar-color: #d1d5db transparent;
+    /* Untuk Firefox */
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar {
+    width: 5px;
+    /* Lebar scrollbar vertikal */
+    height: 5px;
+    /* Tinggi scrollbar horizontal */
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar-track {
+    background: transparent;
+    /* Background jalur scrollbar */
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    /* Warna bar (gray-300) */
+    border-radius: 20px;
+    /* Membuat bar membulat */
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af;
+    /* Warna saat hover (gray-400) */
+  }
+}
+
+@theme {
+  --color-dark: #2c2c2a;
+  --color-dark-100: #6b6b68;
+  --color-light: #eeeae0;
+  --color-light-100: #ddd8cb;
+  --color-accent: #8b7355;
+  --color-accent-100: #c8bfb0;
+  --font-sans: "Plus Jakarta Sans";
+}
