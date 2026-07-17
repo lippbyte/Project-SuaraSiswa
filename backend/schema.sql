@@ -68,11 +68,12 @@ CREATE TABLE IF NOT EXISTS guest_votes (
     guest_id INT NOT NULL,
     post_id INT NOT NULL,
     option_id INT NULL, -- NULL for direct post votes (upvote post), value for poll option votes
-    type ENUM('upvote', 'poll') NOT NULL,
+    reply_id INT NULL,
+    type ENUM('upvote', 'poll', 'reply_vote') NOT NULL,
     voted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (guest_id) REFERENCES buku_tamu(id) ON DELETE CASCADE,
     FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
-    UNIQUE KEY unique_vote (guest_id, post_id, option_id)
+    UNIQUE KEY unique_vote (guest_id, post_id, option_id, reply_id)
 );
 
 -- Table for Activity Logs (Live Activity Feed)

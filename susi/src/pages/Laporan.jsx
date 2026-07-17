@@ -26,7 +26,7 @@ export default function Laporan({ card, setPageFunc, user, setShowLogin, userVot
         return true;
     };
 
-    const hasVoted = userVotes && userVotes.some(v => v.post_id === card.id && v.option_id === null);
+    const hasVoted = Array.isArray(userVotes) && userVotes.some(v => v.post_id === card.id && v.option_id === null);
 
     const handlePostVote = async () => {
         if (!checkUser()) return;

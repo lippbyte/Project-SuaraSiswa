@@ -62,7 +62,7 @@ export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVot
         return true;
     };
 
-    const hasVoted = userVotes && userVotes.some(v => v.post_id === card.id && v.option_id === null);
+    const hasVoted = Array.isArray(userVotes) && userVotes.some(v => v.post_id === card.id && v.option_id === null);
 
     const handlePostVote = async () => {
         if (!checkUser()) return;
@@ -95,7 +95,7 @@ export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVot
 
     const handleReplyVote = async (replyId) => {
         if (!checkUser()) return;
-        const hasVotedReply = userVotes && userVotes.some(v => v.reply_id === replyId);
+        const hasVotedReply = Array.isArray(userVotes) && userVotes.some(v => v.reply_id === replyId);
         const method = hasVotedReply ? 'DELETE' : 'POST';
         const url = `${BACKEND_URL}/api/posts/${card.id}/replies/${replyId}/vote`;
         try {
@@ -249,7 +249,7 @@ export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVot
                 <div className="flex flex-col gap-4 flex-1">
                     <p className="text-sm font-bold text-dark-100">{repliesCount} Komentar</p>
                     {replies.map((reply) => {
-                        const hasVotedReply = userVotes && userVotes.some(v => v.reply_id === reply.id);
+                        const hasVotedReply = Array.isArray(userVotes) && userVotes.some(v => v.reply_id === reply.id);
                         return (
                             <Comment 
                                 key={reply.id} 

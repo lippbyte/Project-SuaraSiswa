@@ -30,10 +30,10 @@ export default function Demos({ card, setPageFunc, user, setShowLogin, userVotes
         return true;
     };
 
-    const hasVotedPost = userVotes && userVotes.some(v => v.post_id === card.id && v.option_id === null);
+    const hasVotedPost = Array.isArray(userVotes) && userVotes.some(v => v.post_id === card.id && v.option_id === null);
 
     const getVotedOption = () => {
-        if (!userVotes) return null;
+        if (!Array.isArray(userVotes)) return null;
         const v = userVotes.find(v => v.post_id === card.id && v.option_id !== null);
         return v ? v.option_id : null;
     };
