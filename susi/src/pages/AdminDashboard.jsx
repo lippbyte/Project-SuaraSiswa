@@ -88,17 +88,17 @@ export default function AdminDashboard({ user, setPageFunc }) {
     const getActionBadgeColor = (action) => {
         switch (action) {
             case 'vote':
-                return 'bg-[#5C7A6B]/20 text-[#476254] border-[#5C7A6B]/30';
+                return 'bg-[#1E9A68]/20 text-[#1E9A68] border-[#1E9A68]/30';
             case 'unvote':
                 return 'bg-red-100 text-red-700 border-red-200';
             case 'poll':
-                return 'bg-[#d4a843]/20 text-[#a37920] border-[#d4a843]/30';
+                return 'bg-[#F59E0B]/20 text-[#D97706] border-[#F59E0B]/30';
             case 'unpoll':
                 return 'bg-orange-100 text-orange-700 border-orange-200';
             case 'reply':
-                return 'bg-[#6b3f72]/20 text-[#542d5b] border-[#6b3f72]/30';
+                return 'bg-[#8E44AD]/20 text-[#8E44AD] border-[#8E44AD]/30';
             case 'post':
-                return 'bg-[#3b6d11]/20 text-[#3b6d11] border-[#3b6d11]/30';
+                return 'bg-[#1E9A68]/20 text-[#1E9A68] border-[#1E9A68]/30';
             case 'delete':
                 return 'bg-neutral-200 text-neutral-700 border-neutral-300';
             default:

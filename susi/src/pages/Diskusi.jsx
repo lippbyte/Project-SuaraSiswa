@@ -36,13 +36,15 @@ function Comment({ comment, onVote, user, onDelete, hasVoted }) {
 }
 
 export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVotes, fetchUserVotes }) {
+    const [commentText, setCommentText] = useState('');
+
     if (!card) {
         return (
             <div className="page-container bg-light pl-4 pr-4 pb-18 pt-20 md:pt-24 lg:pl-12 lg:pr-12 lg:pt-26 flex flex-col justify-center items-center gap-4 text-dark min-h-[60vh]">
                 <p className="text-lg font-bold text-dark-100">Data postingan tidak ditemukan atau halaman di-refresh.</p>
                 <button 
                     onClick={() => setPageFunc('forum')}
-                    className="px-6 py-2 bg-[#5C7A6B] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
+                    className="px-6 py-2 bg-[#1E9A68] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
                 >
                     Kembali ke Forum
                 </button>
@@ -50,7 +52,6 @@ export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVot
         );
     }
 
-    const [commentText, setCommentText] = useState('');
     const replies = card.replies || [];
     const repliesCount = replies.length;
 
@@ -208,11 +209,11 @@ export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVot
             </div>
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
                 <div className="flex flex-col gap-4 flex-1">
-                    <div className="bg-[#5C7A6B] p-4 rounded-lg flex flex-col gap-2 text-light relative">
+                    <div className="bg-[#1E9A68] p-4 rounded-lg flex flex-col gap-2 text-light relative">
                         {isPostOwner && (
                             <button 
                                 onClick={handleDeletePost}
-                                className="absolute right-4 top-4 bg-[#C0392B] hover:brightness-110 text-light py-1 px-3 rounded-md text-xs font-bold cursor-pointer transition-all shadow-md"
+                                className="absolute right-4 top-4 bg-[#F25724] hover:brightness-110 text-light py-1 px-3 rounded-md text-xs font-bold cursor-pointer transition-all shadow-md"
                             >
                                 {user.role === 'admin' ? 'Hapus Post' : '🗑️ Hapus Milik Saya'}
                             </button>
@@ -228,7 +229,7 @@ export default function Diskusi({ card, setPageFunc, user, setShowLogin, userVot
                             <p>Suara</p>
                         </div>
                         <p 
-                            className={`pl-4 pr-4 text-sm md:text-xl flex gap-2 items-center rounded-lg font-bold cursor-pointer transition-all active:scale-95 ${hasVoted ? 'bg-[#3b6d11] text-light' : 'bg-[#5C7A6B] text-light hover:brightness-110'}`}
+                            className={`pl-4 pr-4 text-sm md:text-xl flex gap-2 items-center rounded-lg font-bold cursor-pointer transition-all active:scale-95 ${hasVoted ? 'bg-[#156e4a] text-light' : 'bg-[#1E9A68] text-light hover:brightness-110'}`}
                             onClick={handlePostVote}
                         >
                             <FaRegArrowAltCircleUp /> {hasVoted ? '✓ Batalkan' : 'Suarakan'}

@@ -17,10 +17,10 @@ export default function Form({ setPageFunc, user, setShowLogin }) {
     const [anonim, setAnonim] = useState(true);
 
     const bgColorMapping = {
-        diskusi: '#5C7A6B',
-        musyawarah: '#6B3F72',
-        demos: '#D4A843',
-        laporan: '#C0392B',
+        diskusi: '#1E9A68',
+        musyawarah: '#8E44AD',
+        demos: '#F59E0B',
+        laporan: '#F25724',
     };
 
     const addAgenda = () => {
@@ -143,11 +143,11 @@ export default function Form({ setPageFunc, user, setShowLogin }) {
         return (
             <div className="page-container pl-4 pr-4 pb-4 pt-20 md:pt-24 lg:pl-12 lg:pr-12 lg:pt-26 flex flex-col justify-center items-center bg-light text-dark gap-4 min-h-svh">
                 <div className="p-6 bg-neutral-50 border border-accent-100 rounded-lg shadow-md flex flex-col items-center text-center max-w-md gap-3">
-                    <h2 className="text-xl font-bold text-[#5C7A6B]">Buku Tamu Diperlukan</h2>
+                    <h2 className="text-xl font-bold text-[#1E9A68]">Buku Tamu Diperlukan</h2>
                     <p className="text-sm text-dark-100">Anda harus mengisi Buku Tamu atau masuk terlebih dahulu sebelum dapat membuat unggahan baru.</p>
                     <button 
                         onClick={() => setShowLogin(true)}
-                        className="mt-2 px-6 py-2 bg-[#5C7A6B] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
+                        className="mt-2 px-6 py-2 bg-[#1E9A68] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
                     >
                         Isi Buku Tamu / Login
                     </button>
@@ -167,10 +167,10 @@ export default function Form({ setPageFunc, user, setShowLogin }) {
                     <div className="flex flex-col gap-2">
                         <p className="text-dark-100 text-sm font-bold">Tipe Unggahan</p>
                         <div className="grid grid-cols-2 gap-2">
-                            <div role="button" style={{ backgroundColor: type === 'diskusi' ? '#5C7A6B' : '#ddd8cb', color: type === 'diskusi' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('diskusi')}>Diskusi</div>
-                            <div role="button" style={{ backgroundColor: type === 'musyawarah' ? '#6B3F72' : '#ddd8cb', color: type === 'musyawarah' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('musyawarah')}>Musyawarah</div>
-                            <div role="button" style={{ backgroundColor: type === 'demos' ? '#D4A843' : '#ddd8cb', color: type === 'demos' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('demos')}>Demos/Polling</div>
-                            <div role="button" style={{ backgroundColor: type === 'laporan' ? '#C0392B' : '#ddd8cb', color: type === 'laporan' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('laporan')}>Laporan</div>
+                            <div role="button" style={{ backgroundColor: type === 'diskusi' ? '#1E9A68' : '#ddd8cb', color: type === 'diskusi' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('diskusi')}>Diskusi</div>
+                            <div role="button" style={{ backgroundColor: type === 'musyawarah' ? '#8E44AD' : '#ddd8cb', color: type === 'musyawarah' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('musyawarah')}>Musyawarah</div>
+                            <div role="button" style={{ backgroundColor: type === 'demos' ? '#F59E0B' : '#ddd8cb', color: type === 'demos' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('demos')}>Demos/Polling</div>
+                            <div role="button" style={{ backgroundColor: type === 'laporan' ? '#F25724' : '#ddd8cb', color: type === 'laporan' ? '#eeeae0' : '#2c2c2a' }} className="p-2 bg-light-100 rounded-md text-center text-sm font-bold text-light border border-accent-100 cursor-pointer" onClick={() => setType('laporan')}>Laporan</div>
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">

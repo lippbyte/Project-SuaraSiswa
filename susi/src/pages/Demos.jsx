@@ -10,7 +10,7 @@ export default function Demos({ card, setPageFunc, user, setShowLogin, userVotes
                 <p className="text-lg font-bold text-dark-100">Data postingan tidak ditemukan atau halaman di-refresh.</p>
                 <button 
                     onClick={() => setPageFunc('forum')}
-                    className="px-6 py-2 bg-[#d4a843] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
+                    className="px-6 py-2 bg-[#F59E0B] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
                 >
                     Kembali ke Forum
                 </button>
@@ -39,7 +39,7 @@ export default function Demos({ card, setPageFunc, user, setShowLogin, userVotes
     };
     const votedOptionId = getVotedOption();
 
-    const handlePostVote = async () => {
+    const _handlePostVote = async () => {
         if (!checkUser()) return;
         const method = hasVotedPost ? 'DELETE' : 'POST';
         try {
@@ -132,11 +132,11 @@ export default function Demos({ card, setPageFunc, user, setShowLogin, userVotes
             </div>
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
                 <div className="flex flex-col gap-4 flex-1">
-                    <div className="bg-[#d4a843] p-4 rounded-lg flex flex-col gap-2 text-light relative">
+                    <div className="bg-[#F59E0B] p-4 rounded-lg flex flex-col gap-2 text-light relative">
                         {isPostOwner && (
                             <button 
                                 onClick={handleDeletePost}
-                                className="absolute right-4 top-4 bg-[#C0392B] hover:brightness-110 text-light py-1 px-3 rounded-md text-xs font-bold cursor-pointer transition-all shadow-md"
+                                className="absolute right-4 top-4 bg-[#F25724] hover:brightness-110 text-light py-1 px-3 rounded-md text-xs font-bold cursor-pointer transition-all shadow-md"
                             >
                                 {user.role === 'admin' ? 'Hapus Post' : '🗑️ Hapus Milik Saya'}
                             </button>
@@ -154,7 +154,7 @@ export default function Demos({ card, setPageFunc, user, setShowLogin, userVotes
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 flex-1">
-                    <p className="text-sm font-bold text-dark-100">Opsi {votedOptionId ? <span className="text-[#d4a843]">(Klik pilihan Anda untuk membatalkan)</span> : ''}</p>
+                    <p className="text-sm font-bold text-dark-100">Opsi {votedOptionId ? <span className="text-[#F59E0B]">(Klik pilihan Anda untuk membatalkan)</span> : ''}</p>
                     {options.map((option) => {
                         const percent = voteTotal > 0 ? Math.floor((option.currentVotes / voteTotal) * 100) : 0;
                         const isSelected = votedOptionId === option.id;
@@ -169,7 +169,7 @@ export default function Demos({ card, setPageFunc, user, setShowLogin, userVotes
                                     <p className="text-dark-100 font-bold">{percent}%</p>
                                 </div>
                                 <div className="bg-light-100 w-full h-2 rounded-2xl relative">
-                                    <div style={{ width: `${percent}%`, backgroundColor: isSelected ? '#3b6d11' : (option.currentVotes === maxVotes && maxVotes > 0 ? '#3b6d11' : '#d4a843') }} className="absolute h-full rounded-2xl"></div>
+                                    <div style={{ width: `${percent}%`, backgroundColor: isSelected ? '#3b6d11' : (option.currentVotes === maxVotes && maxVotes > 0 ? '#3b6d11' : '#F59E0B') }} className="absolute h-full rounded-2xl"></div>
                                 </div>
                                 <p className="text-dark-100">{option.currentVotes} Suara</p>
                             </div>

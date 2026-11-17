@@ -42,5 +42,6 @@
   --color-light-100: #ddd8cb;
   --color-accent: #8b7355;
   --color-accent-100: #c8bfb0;
-  --font-sans: "Plus Jakarta Sans";
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-alt: "Space Grotesk", sans-serif;
 }

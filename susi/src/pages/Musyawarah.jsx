@@ -10,7 +10,7 @@ export default function Musyawarah({ card, setPageFunc, user, setShowLogin, user
                 <p className="text-lg font-bold text-dark-100">Data postingan tidak ditemukan atau halaman di-refresh.</p>
                 <button 
                     onClick={() => setPageFunc('forum')}
-                    className="px-6 py-2 bg-[#6b3f72] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
+                    className="px-6 py-2 bg-[#8E44AD] text-light font-bold rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm"
                 >
                     Kembali ke Forum
                 </button>
@@ -93,11 +93,11 @@ export default function Musyawarah({ card, setPageFunc, user, setShowLogin, user
             </div>
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
                 <div className="flex flex-col gap-4 flex-1">
-                    <div className="bg-[#6b3f72] p-4 rounded-lg flex flex-col gap-2 text-light relative">
+                    <div className="bg-[#8E44AD] p-4 rounded-lg flex flex-col gap-2 text-light relative">
                         {isPostOwner && (
                             <button 
                                 onClick={handleDeletePost}
-                                className="absolute right-4 top-4 bg-[#C0392B] hover:brightness-110 text-light py-1 px-3 rounded-md text-xs font-bold cursor-pointer transition-all shadow-md"
+                                className="absolute right-4 top-4 bg-[#F25724] hover:brightness-110 text-light py-1 px-3 rounded-md text-xs font-bold cursor-pointer transition-all shadow-md"
                             >
                                 {user.role === 'admin' ? 'Hapus Post' : '🗑️ Hapus Milik Saya'}
                             </button>
@@ -118,7 +118,7 @@ export default function Musyawarah({ card, setPageFunc, user, setShowLogin, user
                             <p>Suara</p>
                         </div>
                         <p 
-                            className={`pl-4 pr-4 text-sm md:text-xl flex gap-2 items-center rounded-lg font-bold cursor-pointer transition-all active:scale-95 ${hasVoted ? 'bg-[#3b6d11] text-light' : 'bg-[#6b3f72] text-light hover:brightness-110'}`}
+                            className={`pl-4 pr-4 text-sm md:text-xl flex gap-2 items-center rounded-lg font-bold cursor-pointer transition-all active:scale-95 ${hasVoted ? 'bg-[#672d80] text-light' : 'bg-[#8E44AD] text-light hover:brightness-110'}`}
                             onClick={handlePostVote}
                         >
                             <FaRegArrowAltCircleUp /> {hasVoted ? '✓ Batalkan' : 'Suarakan'}
@@ -130,7 +130,7 @@ export default function Musyawarah({ card, setPageFunc, user, setShowLogin, user
                     <div className="bg-neutral-50 p-4 flex flex-col rounded-lg border border-accent-100 shadow-sm gap-2">
                         {agendaList.map((agenda, index) => (
                             <div key={index} className="flex gap-3 items-center">
-                                <p className="p-2 h-7.5 md:h-8.5 w-7.5 md:w-8.5 text-center rounded-full font-bold text-light bg-[#6b3f72]">{index + 1}</p>
+                                <p className="p-2 h-7.5 md:h-8.5 w-7.5 md:w-8.5 text-center rounded-full font-bold text-light bg-[#8E44AD]">{index + 1}</p>
                                 <p className="text-sm">{agenda}</p>
                             </div>
                         ))}

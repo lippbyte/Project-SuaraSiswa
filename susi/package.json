@@ -13,9 +13,11 @@
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.2.4",
     "gsap": "^3.15.0",
+    "motion": "^14.14.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-icons": "^5.6.0",
+    "react-router-dom": "^7.18.5",
     "socket.io-client": "^4.8.3",
     "tailwindcss": "^4.2.4",
     "usehooks-ts": "^3.1.1"
